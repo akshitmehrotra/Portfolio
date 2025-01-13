@@ -826,3 +826,177 @@ a:hover{
   color: #57abfb;
   text-decoration: underline;
 }
+
+/*Experience*/
+/* Experience Desktop */
+@media screen and (min-width: 821px) {
+  .experience {
+    width: 80vw;
+    margin: 0 auto;
+    margin-bottom: 15vh;
+    padding-top: 10vh;
+  }
+
+  .experienceheading {
+    font-size: 48px;
+    color: #57abfb;
+    margin-bottom: 5vh;
+    text-align: center;
+  }
+
+  .experiencefull {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+    width: 80vw;
+  }
+
+  .experiencecard {
+    background-color: rgb(22, 22, 22);
+    width: 60vw;
+    padding: 2.5rem;
+    border-radius: 40px;
+    transition: transform 0.3s ease;
+  }
+
+  .experiencecard:hover {
+    transform: translateY(-10px);
+  }
+
+  .experiencecard-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 2.5rem;
+  }
+
+  .experiencelogo {
+    min-width: 100px;
+    height: 100px;
+    background-image: url('solv-logo.png'); /* Add your Solv logo */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .experience-details {
+    flex: 1;
+  }
+
+  .experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .experiencetitle {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .experiencecompany {
+    font-size: 20px;
+    color: #57abfb;
+    margin-bottom: 1rem;
+  }
+
+  .experiencedate {
+    font-size: 16px;
+    color: #888;
+  }
+
+  .experiencedesc {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .navexperience {
+    margin-right: 2.5vw;
+  }
+}
+
+/* Experience Mobile */
+@media screen and (max-width: 821px) {
+  .experience {
+    width: 90vw;
+    margin: 0 auto;
+    margin-bottom: 20vh;
+    padding-top: 5vh;
+  }
+
+  .experienceheading {
+    font-size: 24px;
+    color: #57abfb;
+    margin-bottom: 5vh;
+    text-align: center;
+  }
+
+  .experiencefull {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .experiencecard {
+    background-color: rgb(22, 22, 22);
+    width: 80vw;
+    padding: 1.5rem;
+    border-radius: 40px;
+  }
+
+  .experiencecard-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .experiencelogo {
+    width: 80px;
+    height: 80px;
+    background-image: url('solv-logo.png'); /* Add your Solv logo */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .experience-details {
+    width: 100%;
+    text-align: center;
+  }
+
+  .experience-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .experiencetitle {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .experiencecompany {
+    font-size: 18px;
+    color: #57abfb;
+    margin-bottom: 0.8rem;
+  }
+
+  .experiencedate {
+    font-size: 14px;
+    color: #888;
+  }
+
+  .experiencedesc {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .navexperience {
+    margin-right: 2.5vw;
+  }
+}

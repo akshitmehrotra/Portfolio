@@ -461,6 +461,7 @@ body{
   .aboutmetextblue{
     display: inline-block;
     color: #57abfb;
+    white-space: nowrap;
   }
 }
 
@@ -837,6 +838,10 @@ a:hover{
     padding-top: 10vh;
   }
 
+  .see-more {
+    display: none !important;
+  }
+
   .experienceheading {
     font-size: 48px;
     color: #57abfb;
@@ -991,12 +996,116 @@ a:hover{
     color: #888;
   }
 
-  .experiencedesc {
-    font-size: 14px;
-    line-height: 1.5;
+  @media screen and (max-width: 821px) {
+    .experience {
+        width: 90vw;
+        margin: 0 auto;
+        margin-bottom: 20vh;
+        padding-top: 5vh;
+    }
+
+    .experienceheading {
+        font-size: 24px;
+        color: #57abfb;
+        margin-bottom: 5vh;
+        text-align: center;
+    }
+
+    .experiencefull {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .experiencecard {
+        background-color: rgb(22, 22, 22);
+        width: 80vw;
+        padding: 1.5rem;
+        border-radius: 40px;
+    }
+
+    .experiencecard-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .experiencelogo {
+        width: 80px;
+        height: 80px;
+        background-image: url('solv-logo.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .experience-details {
+        width: 100%;
+        text-align: center;
+    }
+
+    .experience-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .experiencetitle {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .experiencecompany {
+        font-size: 18px;
+        color: #57abfb;
+        margin-bottom: 0.8rem;
+    }
+
+    .experiencedate {
+        font-size: 14px;
+        color: #888;
+    }
+
+    .experiencedesc {
+      font-size: 14px;
+      line-height: 1.5;
+      text-align: left;
+      max-height: 150px;
+      overflow: hidden;
+      position: relative;
+      transition: max-height 0.5s ease-out;
+      /* Add padding at bottom to prevent text overlap with see-more */
+      padding-bottom: 40px;
   }
 
-  .navexperience {
-    margin-right: 2.5vw;
+  .experiencedesc.expanded {
+      max-height: 2000px;
+      padding-bottom: 20px;
+  }
+    .see-more {
+      text-align: center;
+      color: #57abfb;
+      padding: 15px 0;
+      cursor: pointer;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: linear-gradient(transparent 0%, rgb(22, 22, 22) 35%);
+      font-weight: 500;
+      z-index: 2;
+  }
+
+  .experiencedesc.expanded .see-more {
+      position: relative;
+      background: none;
+      padding: 10px 0;
+      margin-top: 10px;
+  }
+  
   }
 }

@@ -31,3 +31,22 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Get all see-more elements
+  const seeMoreElements = document.querySelectorAll('.see-more');
+  
+  // Add click event listener to each see-more element
+  seeMoreElements.forEach(element => {
+      element.addEventListener('click', function(e) {
+          // Prevent event from bubbling up
+          e.stopPropagation();
+          // Get parent experiencedesc element
+          const descElement = this.parentElement;
+          // Toggle expanded class
+          descElement.classList.toggle('expanded');
+          // Update text
+          this.textContent = descElement.classList.contains('expanded') ? 'See Less' : 'See More';
+      });
+  });
+});
